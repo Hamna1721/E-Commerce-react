@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Productsdetails from './Productsdetails';
+import ProdcutCard from './ProductCard';
 
 const Products = () => {
   const [productsData, setProductsData] = useState([]);
@@ -21,14 +21,15 @@ const Products = () => {
 
   return (
     <div className="container mt-5 pt-5">
+      <nav></nav>
       {loading ? (
         <h1>Loading...</h1>
       ) : (
         <div className="row">
           {productsData.map((product) => (
-            <Productsdetails
+            <ProdcutCard
               key={product.id}
-              Productsdetails={product}
+              product={product}
               onAddToCart={() => {}}
               onViewDetail={() => {}}
             />
