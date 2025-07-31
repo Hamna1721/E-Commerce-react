@@ -23,15 +23,19 @@ const Products = () => {
     <div className="container mt-5 pt-5">
       <nav></nav>
       {loading ? (
-        <h1>Loading...</h1>
+        <div class="d-flex justify-content-center align-item--center">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
       ) : (
         <div className="row">
           {productsData.map((product) => (
             <ProdcutCard
               key={product.id}
               product={product}
-              onAddToCart={() => {}}
-              onViewDetail={() => {}}
+              onAddToCart={() => { }}
+              onViewDetail={() => { }}
             />
           ))}
         </div>

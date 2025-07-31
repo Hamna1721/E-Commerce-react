@@ -3,9 +3,13 @@ import App from "./App";
 import Products from "./Products";
 import Cartproduct from "./ProductCard";
 import Productdetails from "./Productdetails"
+// import Cart from "./Cart"
+import Cart from "./Cart"
 import Dashboard from "./Dashboard";
-import Profile from "./Account";
-import Settings from "./Control";
+//import Profile from "./Account";//
+//import Settings from "./Control";//
+import Account from "./Account";
+import Control from "./Control";
 
 const router = createBrowserRouter([
    {
@@ -17,16 +21,20 @@ const router = createBrowserRouter([
     element: <Productdetails />,
   },
   {
+    path: "/cart",
+    element: <Cart />,
+  },
+  {
     path: "/dashboard",
     element: <Dashboard />,
     children: [
       {
-        path: "profile",    
-        element: <Profile />,
+        path: "account",    
+        element: <Account />
       },
       {
-        path: "settings",    
-        element: <Settings />,
+        path: "control",    
+        element: <Control />
       },
     ],
   },

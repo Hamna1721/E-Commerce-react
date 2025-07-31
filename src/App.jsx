@@ -1,5 +1,6 @@
 import React from 'react';
 import Products from './Products';
+import { NavLink } from "react-router";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -20,10 +21,12 @@ function App() {
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                <li className="nav-item">
+                  <NavLink to="/cart" className="nav-link">
+                    Cart
+                  </NavLink>
                 </li>
-                <li class="nav-item dropdown">
+                {/* <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Dropdown
                   </a>
@@ -33,10 +36,10 @@ function App() {
                     <li><hr class="dropdown-divider" /></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                   </ul>
-                </li>
-                <li class="nav-item">
+                </li> */}
+                {/* <li class="nav-item">
                   <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
+                </li> */}
               </ul>
               <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
